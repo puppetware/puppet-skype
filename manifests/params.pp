@@ -1,4 +1,4 @@
-# == Class: skype:params
+# == Class: skype::params
 #
 # Define default parameters.
 #
