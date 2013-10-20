@@ -1,6 +1,6 @@
 # == Class: skype::install
 #
-# This class is used to install Skype on OS X.
+# Install Skype for OS X.
 #
 # === Authors
 #
@@ -15,6 +15,8 @@ class skype::install {
   $package = $skype::params::package
   $source  = $skype::params::source
   $version = $skype::params::version
+
+  notice($source)
 
   package {"${package}-${version}":
     ensure => installed,

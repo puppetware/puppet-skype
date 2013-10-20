@@ -1,6 +1,6 @@
 # == Class: skype
 #
-# This class is used to install Skype on OS X.
+# Install Skype for OS X.
 #
 # === Parameters:
 #

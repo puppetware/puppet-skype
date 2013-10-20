@@ -13,15 +13,11 @@
 class skype::params {
 
   $package = 'skype'
-  $version = '6.8.59.351'
+  $version = '6.9.59.517'
 
-  case $::kernel {
-    'Darwin': {
-       $source  = "http://download.skype.com/macosx/Skype_${version}.dmg"
-    }
-    default: {
-      fail("Unsupported Kernel: ${::kernel} Operating System: ${::operatingsystem}")
-    }
+  $source = $::kernel ? {
+    'Darwin' => "http://download.skype.com/macosx/Skype_${version}.dmg",
+    default => fail("Unsupported Kernel: ${::kernel} Operating System: ${::operatingsystem}")
   }
 
 }

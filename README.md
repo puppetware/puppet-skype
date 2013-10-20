@@ -1,40 +1,28 @@
-Puppet Module: Skype
-=============================
+Puppet Module - Skype
+=====================
 
 This Puppet module installs Skype.
 
 Supported Platforms:
 
-- OS X (10.7+)
+- Darwin
 
-Examples
---------
+Usage
+-----
+
+Install Skype 6.9.59.517 by default:
 
 ```
-include skype
+class {'skype': }
 ```
 
-or
+Install a specific version:
 
 ```
 class {'skype':
   version => '6.8.59.351',
 }
 ```
-
-Versioning
-----------
-
-skoblenick/puppet-skype is maintained under the Semantic Versioning guidelines.
-
-Releases will be numbered with the following format:
-
-`<major>.<minor>.<patch>`
-
-For more information on SemVer, please visit [http://semver.org/][semver].
-
-[semver]: http://semver.org
-
 
 MIT License
 -----------
