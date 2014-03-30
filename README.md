@@ -10,7 +10,7 @@ Supported Platforms:
 Usage
 -----
 
-Install Skype 6.9.59.517 by default:
+Install Skype 6.15.59.330 by default:
 
 ```
 class {'skype': }

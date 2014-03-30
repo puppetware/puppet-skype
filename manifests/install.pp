@@ -11,14 +11,13 @@
 # Copyright 2013 Ryan Skoblenick.
 #
 class skype::install {
+  $version = $skype::version
 
-  $package = $skype::params::package
-  $source  = $skype::params::source
-  $version = $skype::params::version
+  $source = $::osfamily ? {
+    'Darwin' => "http://download.skype.com/macosx/Skype_${version}.dmg",
+  }
 
-  notice($source)
-
-  package {"${package}-${version}":
+  package {"skype-${version}":
     ensure => installed,
     source => $source,
     provider => appdmg,
